@@ -15,13 +15,13 @@ namespace RandomQuotes.Controllers
         [HttpGet("sqli")]
         public IActionResult Get(string name)
         {
-            SQLiteConnection conn = new SQLiteConnection("Data Source=Chinook_Sqlite.sqlite");  
+            SQLiteConnection conn2 = new SQLiteConnection("Data Source=Chinook_Sqlite.sqlite");  
             conn.Open();  
   
-            SQLiteCommand cmd = new SQLiteCommand(conn);  
-            cmd.CommandText = "select * from Employee where LastName == '" + name + "';";
+            SQLiteCommand cmd2 = new SQLiteCommand(conn2);  
+            cmd2.CommandText = "select * from Employee where LastName == '" + name + "';";
   
-            SQLiteDataReader reader = cmd.ExecuteReader();  
+            SQLiteDataReader reader = cmd2.ExecuteReader();  
   
             
             List<string> res = new List<string>();
