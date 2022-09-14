@@ -16,7 +16,7 @@ namespace RandomQuotes.Controllers
         public IActionResult Get(string name)
         {
             SQLiteConnection conn2 = new SQLiteConnection("Data Source=Chinook_Sqlite.sqlite");  
-            conn.Open();  
+            conn2.Open();  
   
             SQLiteCommand cmd2 = new SQLiteCommand(conn2);  
             cmd2.CommandText = "select * from Employee where LastName == '" + name + "';";
