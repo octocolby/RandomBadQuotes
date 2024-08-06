@@ -19,7 +19,9 @@ namespace RandomQuotes.Controllers
             conn.Open();  
   
             SQLiteCommand cmd = new SQLiteCommand(conn);  
+            
             cmd.CommandText = "select * from Employee where FirstName == '" + name + "';";
+            
   
             SQLiteDataReader reader = cmd.ExecuteReader();  
   
