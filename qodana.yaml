@@ -1,0 +1,14 @@
+version: 1.0
+failThreshold: 0
+profile:
+  name: qodana.recommended
+include:
+  - name: CppThisArgMemberFuncDelegateCtorIsUnsuportedByDotNetCore
+  - name: CheckThirdPartySoftwareList
+  - name: CheckModuleLicenses
+  - name: HttpUrlsUsage
+  - name: SqlIdentifierInspection
+  - name: SqlInsertValuesInspection
+  - name: SqlInsertIntoGeneratedColumnInspection
+  - name: SqlIllegalCursorStateInspection
+  - name: SqlInsertNullIntoNotNullInspection
